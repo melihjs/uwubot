@@ -9,7 +9,7 @@
 ## YouTube channels: **[Ronnie](https://www.youtube.com/channel/UC9HFT7vVnIgf_w9kr41OIuA)**, **[zMelihStrqfe](https://www.youtube.com/zMelihStrqfe)**
 ## Discord server: **[click!](https://discord.gg/MgmHyg7Gfu)**
 
-#TÜRKÇE README.md:
+# TÜRKÇE README.md:
 
  - Çok sayıda güzel komut içeren UwU Bot!
  - Ücretsizdir, botconfig/config.json'u doldurun!
