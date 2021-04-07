@@ -10,8 +10,8 @@
  - Everything is set!
  - It works with the prefix you set! It has a premium system!
 ------------------------------------------------------------------------------
-#### Made by: `Ronnie`, `zMelihStrqfe`
-#### YouTube channels: **[Ronnie](https://www.youtube.com/channel/UC9HFT7vVnIgf_w9kr41OIuA)**, **[zMelihStrqfe](https://www.youtube.com/zMelihStrqfe)**
+#### Made by: `ArchéxKaan`, `ArchéxMelih`
+#### YouTube channels: **[ArchéxKaan](https://www.youtube.com/channel/UC9HFT7vVnIgf_w9kr41OIuA)**, **[ArchéxMelih](https://www.youtube.com/ArchéxMelih)**
 #### Discord server: **[click!](https://discord.gg/MgmHyg7Gfu)**
 ------------------------------------------------------------------------------
 # TÜRKÇE README.md:
@@ -21,7 +21,7 @@
  - Her şey hazır!
  - Belirlediğiniz önek ile çalışır! Premium bir sistemi var!
 ------------------------------------------------------------------------------
-#### Yapımcılar: `Ronnie`, `zMelihStrqfe`
-#### YouTube kanallarımız: **[Ronnie](https://www.youtube.com/channel/UC9HFT7vVnIgf_w9kr41OIuA)**, **[zMelihStrqfe](https://www.youtube.com/zMelihStrqfe)**
+#### Yapımcılar: `ArchéxKaan`, `ArchéxMelih`
+#### YouTube kanallarımız: **[ArchéxKaan](https://www.youtube.com/channel/UC9HFT7vVnIgf_w9kr41OIuA)**, **[ArchéxMelih](https://www.youtube.com/ArchéxMelih)**
 #### Discord sunucumuz: **[tıkla!](https://discord.gg/MgmHyg7Gfu)**
 ------------------------------------------------------------------------------
