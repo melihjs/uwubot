@@ -6,9 +6,11 @@ const conf = require("./botconfig/config.json");
 require("./modules/eventLoader.js")(client);
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
+client.config = conf;
+client.logger = console;
 
 client.on("ready", () => {
-    console.log(`[BOT]: Logged in as ${client.user.tag}`)
+    client.logger.log(`[BOT]: Logged in as ${client.user.tag}`)
     client.user.setPresence({ 
         activity: { 
             name: `${client.guilds.cache.array().length} servers!`, 
@@ -22,9 +24,9 @@ readdirSync('./commands/').forEach(async (dir) => {
     let files = readdirSync(`./commands/${dir}`);
     for (let file of files) {
         let cmd = require(`./commands/${dir}/${file}`);
-        client.commands.set(cmd.help.name, cmd);
+        client.commands.set(cmd.config.name, cmd);
         cmd.help.aliases.forEach(async (alias) => {
-            client.aliases.set(alias, cmd.help.name);
+            client.aliases.set(alias, cmd.config.name);
         });
     };
 });
@@ -81,7 +83,7 @@ client.on("message", message => {
 
 client.on("guildCreate", async (guild, message, role, member) => {
     database.set(`premiume.${guild.id}`, false);
-    console.log(`✅ | ${guild.name} (${guild.id}) named server's premium is de-active.`)
+    client.logger.log(`✅ | ${guild.name} (${guild.id}) named server's premium is de-active.`)
 });
 
-client.login(conf.token);
+client.login(conf.token).catch(() => { client.logger.log('bruh token is invalid') });
