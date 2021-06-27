@@ -1,10 +1,11 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const database = require("quick.db");
-const fs = require("fs");
+const { readdirSync } = require("fs");
 const conf = require("./botconfig/config.json");
 require("./modules/eventLoader.js")(client);
-let bot = client.user;
+client.commands = new Discord.Collection();
+client.aliases = new Discord.Collection();
 
 client.on("ready", () => {
     console.log(`[BOT]: Logged in as ${client.user.tag}`)
@@ -17,59 +18,16 @@ client.on("ready", () => {
     });
 });
 
-client.commands = new Discord.Collection();
-client.aliases = new Discord.Collection();
-fs.readdir("./commands/economy", (err, files) => {
-  if (err) console.error(err);
-  console.log(`[ECONOMY]: ${files.length} command will load.`);
-  files.forEach(f => {
-    let props = require(`./commands/economy/${f}`);
-    console.log(`[ECONOMY]: ${props.config.name} named command loaded.`);
-    client.commands.set(props.config.name, props);
-    props.config.aliases.forEach(alias => {
-      client.aliases.set(alias, props.config.name);
-    });
-  });
+readdirSync('./commands/').forEach(async (dir) => {
+    let files = readdirSync(`./commands/${dir}`);
+    for (let file of files) {
+        let cmd = require(`./commands/${dir}/${file}`);
+        client.commands.set(cmd.help.name, cmd);
+        cmd.help.aliases.forEach(async (alias) => {
+            client.aliases.set(alias, cmd.help.name);
+        });
+    };
 });
-
-fs.readdir("./commands/mod", (err, files) => {
-    if (err) console.error(err);
-    console.log(`[MOD]: ${files.length} command will load.`);
-    files.forEach(f => {
-      let props = require(`./commands/mod/${f}`);
-      console.log(`[MOD]: ${props.config.name} named command loaded.`);
-      client.commands.set(props.config.name, props);
-      props.config.aliases.forEach(alias => {
-        client.aliases.set(alias, props.config.name);
-      });
-    });
-  });
-
-fs.readdir("./commands/owner", (err, files) => {
-    if (err) console.error(err);
-    console.log(`[OWNER]: ${files.length} command will load.`);
-    files.forEach(f => {
-      let props = require(`./commands/owner/${f}`);
-      console.log(`[OWNER]: ${props.config.name} named command loaded.`);
-      client.commands.set(props.config.name, props);
-      props.config.aliases.forEach(alias => {
-        client.aliases.set(alias, props.config.name);
-      });
-    });
-  });
-
-fs.readdir("./commands/utilies", (err, files) => {
-    if (err) console.error(err);
-    console.log(`[UTILIES]: ${files.length} command will load.`);
-    files.forEach(f => {
-      let props = require(`./commands/utilies/${f}`);
-      console.log(`[UTILIES]: ${props.config.name} named command loaded.`);
-      client.commands.set(props.config.name, props);
-      props.config.aliases.forEach(alias => {
-        client.aliases.set(alias, props.config.name);
-      });
-    });
-  });
 
 client.on("message", async (message) => {
     let miktar = "1";
