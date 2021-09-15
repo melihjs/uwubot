@@ -12,7 +12,7 @@
 ------------------------------------------------------------------------------
 #### Made by: `ArchéxKaan`, `ArchéxMelih`
 #### YouTube channels: **[ArchéxKaan](https://www.youtube.com/channel/UC9HFT7vVnIgf_w9kr41OIuA)**, **[ArchéxMelih](https://www.youtube.com/ArchéxMelih)**
-#### Discord server: **[click!](https://discord.gg/MgmHyg7Gfu)**
+#### Discord server: **[click!](https://discord.gg/SGdy3jtMCB)**
 ------------------------------------------------------------------------------
 # TÜRKÇE README.md:
 ------------------------------------------------------------------------------
@@ -23,5 +23,5 @@
 ------------------------------------------------------------------------------
 #### Yapımcılar: `ArchéxKaan`, `ArchéxMelih`
 #### YouTube kanallarımız: **[ArchéxKaan](https://www.youtube.com/channel/UC9HFT7vVnIgf_w9kr41OIuA)**, **[ArchéxMelih](https://www.youtube.com/ArchéxMelih)**
-#### Discord sunucumuz: **[tıkla!](https://discord.gg/MgmHyg7Gfu)**
+#### Discord sunucumuz: **[tıkla!](https://discord.gg/SGdy3jtMCB)**
 ------------------------------------------------------------------------------
